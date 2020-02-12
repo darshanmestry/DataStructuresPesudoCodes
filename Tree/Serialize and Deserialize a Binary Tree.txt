@@ -1,0 +1,5 @@
+If given Tree is Binary Search Tree? then store preorder and post order
+If given Binary Tree is Complete Tree? level order traversal
+If given Binary Tree is Full Tree? inorder with larker to see if it is a leaf node
+How to store a general Binary Tree?
+A simple solution is to store both Inorder and Preorder traversals. This solution requires requires space twice the size of Binary Tree.

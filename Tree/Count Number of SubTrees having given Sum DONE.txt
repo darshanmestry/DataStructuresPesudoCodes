@@ -1,0 +1,30 @@
+O(N)
+
+void checkSumofSubtresUtil(node* root,int x)
+{
+	int count=0;
+	it(root==null)
+		return 1
+	
+	int ls=checkSumofSubtres(root->left,x,count)
+	int rs=checkSumofSubtres(root->right,x,count)
+
+	int total=ls+rs=root->data
+	if(total==sum)
+		count++
+
+	return count
+}
+
+void checkSumofSubtres(node *root,x,count)
+{
+	if(root==null)
+		return 0
+	ls=checkSumofSubtres(root->left,x,count)
+	rs=checkSumofSubtres(root->right,x,count)
+
+	int sum=ls+rs+root->data
+	if(sum==x)
+		count++
+	return sum
+}

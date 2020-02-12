@@ -1,0 +1,34 @@
+3 cases to check 
+if Head is null thenc create newnode and make it head and point to itself
+if newnode is lesthan head then we need to insert at head bt before than we need to change pointer oflast node to new node
+else
+	insert in middle
+
+void insert(node* head,int data)
+{
+	Node* newndoe=Node(data)
+	Node* cur=head
+	if(cur==null)
+	{
+		newnode->next=newnode
+		head=newnode
+	}
+	elseif(cur->data>newnode->Data)
+	{
+		while(Cur->next!=head)
+			cur=cur->next
+
+		cur->next=newnode
+		node->next=cur
+		head=newnode
+	}
+	else
+	{
+		while(new->Data >cur->next->Data)
+		{
+			cur=cur->next
+		}
+		newnode->next=cur->next
+		cur->next=newnode
+	}
+}

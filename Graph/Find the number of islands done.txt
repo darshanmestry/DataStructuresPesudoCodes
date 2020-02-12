@@ -1,0 +1,99 @@
+ew int[] { -1, -1, -1,0, 0, 1, 1, 1 }; 
+         { -1, 0, 1,-1,1, -1, 0, 1 }; 
+
+	-1 -1
+	-1  0
+	-1  1
+	 0 -1
+	 0  1
+	 1 -1
+	 1  0
+	 1  1
+
+int isIsland(int[,] M)
+{
+	bool[,] isVisited=new bool[ROW,COL]
+	int count=0;
+	for(int i=0;i<ROW;i++)
+	{
+		for(int j=0;j<COL;j++)
+		{
+			if(isVisited[i,i]==false)
+			{
+			   DFS(M,ROW,COL,IsVisited)
+			   count++;
+			}
+		}
+	}
+  return count++
+}
+	
+
+void DFS(int[,] M,int row,int col,bool[,] isVisited)
+{
+	int rowngr={-1,-1,-1,0,0,1,1,1}
+	int colngr={-1,0,-1,-1,1,1,0,1}
+	
+	isVisited[row,col]=true;
+	for(int  i=0;i<8;i++)
+	{
+			if(isSafe(M,r+rownbr[k],c+colngr[k],isvisited)
+				DFS(M,r+rownbr[k],c+colngr[k],isvisited)
+		
+	}
+}	
+
+bool isSafe(int[,] M,int row,int col,bool[,] isVisited,int i,int j)
+{
+	return (row>=0) && (row<ROW) && (col>=0) && (col<COL) && ((!isVisted[row,col]) && M[row,col]=1)
+}
+
+---------------- practise written ************
+void IslandCount(int[,] a, int r,int c)
+{
+	bool[,] visited=new bool[r,c]
+	int count=0;
+	for(int i=0;i<r;i++)
+	{
+		for(int j=0;j<c;j++)
+		{
+			visited[i][j]=false;
+		}
+	}
+
+	for(int i=0;i<r;i++)
+	{
+		for(int j=0;j<c;j++)
+		{
+			if(a[i,j]==1)
+			{
+				visited[i,j]=true
+			 	util(a,r,c,visited)
+				count++;
+			}
+		}
+	}
+} 
+
+void util((int[,] a, int r,int c,bool[,] visited)
+{
+	int k=8
+	int[] rs={-1,-1,0,1,1,1,0,1}
+	int[] cs={ 0,-1,-1,-1,0,1,1,1}
+	
+	visited[r,c]=true
+	for(int i=0;i<k;i++)
+	{
+		if(isSafe(a,r+rs[i],c+cs[i],visited)
+		{
+			util(a,r+rs[i],c+cs[i],visited)
+		}
+	}
+}
+
+isSafe(a,r+rs[i],c+cs[i],visited)
+{
+	return (r>=0 && c>=0 && r<=ROW && C<=COL && !visited[r,s] && a[r,c]==1)
+}
+
+	

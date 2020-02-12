@@ -1,0 +1,74 @@
+
+Merge sort linkedlist
+
+Divided the linkedlist in tow half by calcuating midnode
+
+perfrom recurvie mergersortof left list and right lift
+
+and then call sortedMerge to Join the left and right
+
+In Sorted Merger
+if leftlist is null return right list
+if right listi is null return left list
+
+
+if leftdata is less than right data
+result->data=left of data
+reslt->next= here again recursively call sortedMeger and pass left->next right
+
+if right of data is les than left of data than 
+result of data=right of data
+result->next will be calling recurve sorted merger(left,right->next
+
+
+===Start of fucntion==== Time Complexity n(logn)
+void MergerSortLinkedList(node* head)
+{
+	if(head==null || head->next==null)
+	 return
+	
+	node* MiddleNode=GetMiddleElementOfLinkedList(node* head)	
+	node* elemNextToMiddle=MiddleNode->next
+
+	MiddleNode->next=null;
+
+	node left =MergerSortLinkedList(head)
+	node right=MergerSortLinkedList(elemNextToMiddleNode)
+
+	node result=SortedMerge(left,right)
+
+}
+
+node* SortedMerge(node* left,node* right)
+{
+	node* result
+	if(left==null)
+		return right
+	if(right==null)
+		return left
+
+	if(left.data<=right.data)
+	{
+		result.data=left.data
+		result.next=SortedMerge(left.next,right)
+	}
+	else
+	{
+		result.data=right.data
+		result.next=SortedMerge(left,right.next)
+	}
+	return result
+}
+
+node* GetMiddleElementOfLinkedList(node* head)
+{
+	node* slow=head;
+	node* fast=head;
+	
+	while(fast!=null)
+	{
+		slow=slow->next
+		fast=fast->next->next
+	}
+	return slow
+}

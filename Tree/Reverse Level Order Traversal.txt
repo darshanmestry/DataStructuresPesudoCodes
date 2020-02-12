@@ -1,0 +1,32 @@
+
+o(n)
+void revserlevel(node* root)
+{
+	stack<node*> s;
+	queue<node*> q;
+	
+	q.push(root)
+	
+	while(!q.isEmpty())
+	{
+		root=q.front()
+	
+		s.push(root)
+		
+		if(root->right!=null)
+			q.push(root->right)
+
+		if(root->left!=null)
+			q.push(root->left)
+		
+	}
+
+	while(!S.isEmpty)
+	{
+		root=s.TOp()
+		cout<<" "root;
+		s.pop();
+
+	}
+	
+}

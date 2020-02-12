@@ -1,0 +1,12 @@
+Node with the minimun value in a binary seach tree will be the leftmost node of the tree
+and its complextiny is  o(n) where n is no of nodes on the left path
+
+Void min(Node* root)
+{
+
+	while(root->left!=null)
+	{
+		root=root->left
+	}
+	return root->data
+}

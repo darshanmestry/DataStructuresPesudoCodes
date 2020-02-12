@@ -1,0 +1,18 @@
+two tress are identical if their root as well as left subtrees  and right subtress are equal
+so check if root1 and root2 are both null then they are equal and return 1
+
+and if root!=null and root2!=null
+
+int isIdentical(node* root1,node* root2)
+{
+	if(root1==null && root2==null)
+		return 1;
+	if(root!null && root2!=null)
+	{
+		return (root1->data==root2->data && 
+		isIdentical(root1->left,root2->left) && 
+		isIdentical(root1->right,root2->right))
+	}
+
+	return 0;
+}

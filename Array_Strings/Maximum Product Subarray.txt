@@ -1,0 +1,19 @@
+int max_product_sumarray(int[] a)
+{
+	int current_max_product=a[0]
+	int prev_max_product=a[0]
+	int prev_min_product=a[0]
+	int ans=a[0]
+	for(int i=0;i<a.Length;i++)
+	{
+		current_max_product=MAX(prev_max_product*a[i],prev_min_product*a[i],a[i])
+		int current_min_proudct=MIN(prev_max_product*a[i],prev_min_product*a[i],a[i])
+
+		ans=MAX(ans,current_max_product)	
+	
+		perv_max_product=current_max_product;
+		prev_min_product=current_min_product;
+	}
+
+	return current_max_product
+}

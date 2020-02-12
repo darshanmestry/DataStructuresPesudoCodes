@@ -1,0 +1,11 @@
+void printBSTinGIvenRange(node* root,int k1,int k2)
+{
+	if(root->data>k1)
+		printBSTinGIvenRange(root->left,k1,k2)
+	
+	if(root->data>k1 && root->data<k2)
+		print root->data
+
+	if(root->data<k2)
+		printBSTinGIvenRange(root->right,k1,k2)
+}

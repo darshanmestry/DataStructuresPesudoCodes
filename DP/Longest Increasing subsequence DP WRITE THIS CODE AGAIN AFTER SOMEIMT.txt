@@ -1,0 +1,32 @@
+o(n^2)
+
+int LonggestIncreasingSubsequence(int[] arr,n)
+{
+	int[] t=new int[n]
+	for(int i=0;i<m;i++)
+		t[i]=1;
+	
+	for(int i=1;i<n;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			if(a[j]<a[i])
+			{
+			t[i]=MAX(t[i],a[j]+1);
+			}
+		}
+	}
+	
+	int max=0;
+	
+ 	for ( i = 0; i < n; i++ )  
+	{
+            if ( max < t[i] )  
+                max = t[i];  
+  
+            return max;  
+  	  }  
+}
+
+o(nlogn)
+

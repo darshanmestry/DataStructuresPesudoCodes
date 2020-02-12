@@ -1,0 +1,22 @@
+// Do inoder travaersal of tree without printint node
+that is recuse through left subtee and then right subtre
+
+and in the end swap the elements of left and right node
+
+o(n)
+and for tree traversal completing is o(n)
+
+void node* Mirror(Node* root)
+{
+	if(root==null)
+		return
+	else
+	{
+		Mirror(root->left)
+		Mirror(root->right)
+
+		Node* temp= root->left
+		root->left=root->right
+		root->right-temp
+	}
+}

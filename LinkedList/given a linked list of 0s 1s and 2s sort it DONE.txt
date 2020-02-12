@@ -1,0 +1,4 @@
+TO solve this.
+Count the nos of 0s 1s and 2s in c1,c2 and c3 variables respectibely
+
+and then fill loop till c1,c2 and c3 and fill the element in linkedlist

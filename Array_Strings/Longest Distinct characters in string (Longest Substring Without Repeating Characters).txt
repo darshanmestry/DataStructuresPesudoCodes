@@ -1,0 +1,24 @@
+int longest_substring_without_repeating_characters(string str)
+{
+	int len=str.Length;
+	int i=0,j=0; //start window and endwindow
+
+	HashSet<char> set=new HashSet<char>();
+
+	while(j<len)
+	{
+		if(!set.contains(str[j]))
+		{
+			set.add(str[j])
+			j++;
+
+			MaxLen=Math.Max(MacLength,j-i);
+		}
+		else
+		{
+			set.remove(str[i])
+			i++;
+		}
+	}
+	
+}

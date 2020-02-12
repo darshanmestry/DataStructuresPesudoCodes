@@ -1,0 +1,14 @@
+int countCoinWays(int[] arr, int len,int sum)
+{
+	int[] table=new int[sum+1]
+	table[0]=1;
+	for(int i=0;i<n;i++)
+	{
+		for(int j=arr[i];j<=sum;j++)
+		{
+			table[j]=table[j]+table[j-arr[i]]
+		}
+	}
+
+	return table[sum]
+}

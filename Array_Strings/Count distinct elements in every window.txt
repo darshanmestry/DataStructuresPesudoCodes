@@ -1,0 +1,48 @@
+void countDistinct(int[] arr,int k)
+{
+	Dictionary<int,int> map=new Dictionary<int,int>();
+	int count=0;
+
+	for(int i=0;i<k;i++)
+	{
+		if(!map.containsKey(arr[i]))
+		{
+			map.add(arr[i],1);
+		count++;
+		     }
+		else
+		{
+			map[arr[i]]++;
+		}
+	}
+
+	console.Write(count)
+
+  	for(int i=k;k<arr.Length;i++)
+	{
+		if(map.containsKey[arr[i-k]])
+		{
+			if(map[arr[i-k]==1)
+			{
+				map.remove(Arr[i];	
+				count--;
+			}
+			else
+			{
+				map[arr[i-k]]--;
+			}
+		}
+
+
+		if(!map.ContainsKey(Arr[i]))
+		{
+			map.add(Arr[i],1);
+			count++
+		}
+		else
+		{
+			map[arr[i]]++;
+		}
+	  Console.WriteLine(count)
+	}
+}

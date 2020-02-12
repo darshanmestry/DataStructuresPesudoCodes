@@ -1,0 +1,50 @@
+To construct tree from inorder and preorder taversal 
+store the indexes of inorder in Dictionary in wrapper function
+And pass this dictionary to uutl function
+
+in util function initial start and end index will 0 and len-1
+
+if start gets bigeer then end then we return
+
+if start==end this means we need to return new node
+
+then we get element in pre located at startindex and icrement start index
+the get this elenent of this index form the dictionary
+
+and from that index we build left and right subtree and call util function recuseive
+newnode->left=util(pre,startindex,indexFromDict-1,map)
+newnode->right=util(pre,indecFromDict+1,end,map)
+
+void genTree(int[] in,int[] pre,int len)
+{
+	Dictionary<int,int> map=new Dictionary<int,int>();
+	
+	for(int i=0;i<n;i++)
+	{
+		dict.Add(in[i],i)
+	}
+
+	util(in,0,len-1,map,0)
+}
+
+void util(int[] pre,int startIndex,int endIndex,Dictionary<int,int> map)
+{
+	if(startIndex>endInex)
+		return
+	
+	int elem=pre[startIndex];
+	startIndex++;
+
+	Node* newnode= Node(elem)
+
+	if(startIndex==EndIndex)
+		return newnode
+
+		
+	int inIndex=map[elem];
+
+	newnode->left=util(in,startindex,endIndex-1,map)
+	newnode->right=util(in,inIndex+1,endIndex,map)
+	
+}
+

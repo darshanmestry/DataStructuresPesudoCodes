@@ -1,0 +1,22 @@
+void levelOrder(node* root)
+{
+	if(root==null)
+		return
+	queue<node *> q;
+
+	q.push(root->data)
+
+	while(!Q.isEmpty())
+	{
+		Node* temp=q.top();
+
+		print temp->data
+		q.pop()
+
+		if(temp->left!=null)
+			q.push(temp->left)
+		if(temp->right!=null)
+			q.push(temp->right)
+		
+	}
+}

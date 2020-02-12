@@ -1,0 +1,59 @@
+1) Initialize result list as empty: res = NULL.
+2) Let 'a' and 'b' be heads first and second lists respectively.
+3) While (a != NULL and b != NULL)
+    a) Find the smaller of two (Current 'a' and 'b')
+    b) Insert the smaller value node at the front of result.
+    c) Move ahead in the list of smaller node. 
+4) If 'b' becomes NULL before 'a', insert all nodes of 'a' 
+   into result list at the beginning.
+5) If 'a' becomes NULL before 'b', insert all nodes of 'a' 
+   into result list at the beginning. 
+
+For sorting the linkedlist in asceding order just add the elements at the end of the linked list
+
+
+void sortedMerge(node* a,node* b)
+{
+	
+	node*res=null
+
+	while(a!=null && b!=null)
+	{
+		if(a->data<=b->Data)
+		{
+			Node* temp=a->next
+			a->next=res
+			res=a
+
+			a=temp
+		}
+		else
+		{
+			Node* temp=b->next
+			b->next=res
+			res=b
+			b=temp;
+		}
+	}
+	while(a!=null)
+	{
+		Node* temp=a->next
+		a->next=res
+		res=a
+		a=temp
+	}
+	while(b!=null)
+	{
+
+		Node* temp=b->next
+		b->next=res
+		res=b
+		b=temp;	
+	}
+
+}
+
+1->3->4  temp=3 1->next=null res=1->next temp=1
+	temp=
+
+5>->2->7

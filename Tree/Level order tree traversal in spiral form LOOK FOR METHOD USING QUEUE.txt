@@ -1,0 +1,73 @@
+
+O(n)
+
+void levelOrder(node* root)
+{
+	stack<node* >s1,s2;
+	s1.push(root)
+
+	while(!s1.ISEMpty() ||!s2.isEmpty())
+	{
+		while(!s1.isEMpty)
+		{
+			node* temp=s1.top
+			s1.pop
+
+			print temp->Data 
+
+			if(Temp->right!=null)
+				s2.push(temp->right)
+			if(Temp->left!=null)
+				s2.push(temp->left)
+		}
+		while(!s2.isEmpty)
+		{
+			node* temp=s2.top
+			s2.pop
+			print temp->Data
+			if(Temp->left!=null)
+				s1.push(temp->left)
+			if(temp->right!=null)
+				s1.push(temp->right
+		}
+		
+	}
+}
+
+
+O(n^2) where n is height of the tee
+
+void levelOrder(node *root)
+{
+	int height=getHeight(root)
+	bool ltr=false
+	for(int i=0;i<height;i++)
+	{
+		printGivelLevel(root,h,ltr)
+		ltr=!ltr
+	}
+}
+
+void printGivelLevel(node* root,int h,bool ltr)
+{
+	if(root==null)
+		return 
+
+	if(h==0)
+		print root->data
+
+	if(h>1)
+	{
+		if(ltr)
+		{
+			printGivelLevel(root->left,h-1,ltr)
+			printGivelLevel(root->right,h-1,ltr)
+		}
+		else
+		{
+			printGivelLevel(root->right,h-1,ltr)
+			printGivelLevel(root->left,h-1,ltr)
+		}
+	}
+	
+}

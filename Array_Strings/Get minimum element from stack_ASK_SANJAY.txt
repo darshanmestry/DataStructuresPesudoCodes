@@ -1,0 +1,3 @@
+To get min from the stack while desiging stack class have one variable min which will always maitain min.
+
+While adding element to stack check value of min with element and update value of min accodrindly

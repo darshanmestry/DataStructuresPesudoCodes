@@ -1,0 +1,32 @@
+o(v+e)
+Void BFS(int s)
+{
+	LinkedList<int> queue=new LinkedList<>();
+
+	bool[] visited=new bool[V]
+	
+	visited[s]=true
+	queue.add(s) 
+	
+	while(!queue.isEmpty())
+	{
+		int data=queue.poll()
+
+		print data
+
+		Iretaror<int> i=adj[s].ListIterator()
+
+		while(i.hasNext())
+		{
+		int n=i.next()
+			if(!visited[n]
+			{
+				visited[n]=true
+				queue.add(n)
+
+			}
+		}
+
+		
+	}
+}

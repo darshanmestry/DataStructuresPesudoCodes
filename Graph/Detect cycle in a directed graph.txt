@@ -1,0 +1,45 @@
+       
+O(V+E) vertices+edes
+bool detectCycle(graph v)
+{
+	string[] color=new string[v]
+
+	for(int i=0;i<v;i++)
+	{
+		color[i]="white";
+	}
+
+	for(int i=0;i<v;i++)
+	{
+		if(color[i]=="WHITE")
+		{
+			if(IsDFS(i,color)
+			{
+				return true
+			}
+		}
+	}
+	return false;
+}
+
+bool isDFS(int i,string[] color)
+{
+
+	color[i]="gray";
+
+	list<int>::iteraror itr
+	foreach(itr=adj[i].begin();itr!=adj[i].end();i++)
+	{
+  
+		if(color[i]=="gray")
+			return true
+
+		if( color[i]=="white" && isDFS(g,i,color)
+			return true
+			
+	}
+		
+	color[i]="black"
+	return false
+	
+}

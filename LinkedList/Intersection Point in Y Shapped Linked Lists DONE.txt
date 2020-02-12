@@ -1,0 +1,51 @@
+void getIntersectionNode(Node* head1,Node* head2)
+{
+	int c1=getLength(head1)
+	int c2-getLength(head2)
+	int d;
+	if(c1>c2)
+	{
+		d=c1-c2
+		Node* node=_getIntersectNode(Node* head1,,Node* head2,d)
+	}
+	else
+	{
+		d=c2-c1
+		Node *node =_getIntersectNode(Node* head2,Node* head1,d)
+	}
+
+}
+
+void _getIntersectNode(Node* head1,Node* head2,int d)
+{	
+	node* cur=head1
+	for(int i=0;i<d;i++)
+	{
+		if(cur!=null)	
+			cur=cur->next
+	}
+	node* cur2=head2
+	
+	while(cur1!=null && cur2!=null)
+	{
+		if(cur1==cur2)
+			return cur1
+		
+		cur1=cur1->next
+		cur2=cur2->next
+	}
+
+	
+}
+
+int getLength(node* head)
+{
+	int i=0
+	node* cur=head;
+	while(cur->next!=null)
+	{
+		cur=cur->next
+		i++
+	}	
+return i
+}

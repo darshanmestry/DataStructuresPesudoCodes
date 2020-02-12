@@ -1,0 +1,31 @@
+private void AnagraCount(string pattern ,string text)
+{
+
+int[] countP=new int[256]
+int[] countT=new int[256]
+
+int Plen=pattern.length;
+int tlen=text.length;
+
+int res=0;
+
+for(int i=0;i<Plen;i++)
+{
+	CountP[pattern.ElementAt(i)]++;
+	CountT[text.ElementAt(i)]++
+}
+
+for(int i=Plen;i<tlen;i++)
+{
+	if(Compare(countP,CountT)
+	{
+		"print  found at index "+(i-Plen)
+		res++;
+	}
+
+	countT[text.ElementAt(i)]++
+
+	countT[text.ElementAt(i-Plen)]--
+
+}
+}

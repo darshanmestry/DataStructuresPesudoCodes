@@ -1,0 +1,22 @@
+Given an array of integers. All numbers occur twice except one number which occurs once. Find the number in O(n) time & constant extra space.
+
+Example :
+
+Input:  ar[] = {7, 3, 5, 4, 5, 3, 4}
+Output: 7 
+
+this can be achived by doing xor on all the elemnts of i and storin the result
+finaly the appearing only once will remain
+
+store 1st element in res and iterate from 1st element
+
+int findSingleElement(int[] a)
+{
+	int res=a[0];
+	for(int i=1;i<a.length;i++)
+	{
+		res=res^a[i]
+	}
+
+	return res
+}

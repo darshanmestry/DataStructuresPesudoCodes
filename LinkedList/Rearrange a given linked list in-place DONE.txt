@@ -1,0 +1,69 @@
+Given a singly linked list L0 -> L1 -> … -> Ln-1 -> Ln. Rearrange the nodes in the list so that the new formed list is : L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 …
+You are required to do this in-place without altering the nodes’ values.
+Examples:
+
+Input:  1 -> 2 -> 3 -> 4
+Output: 1 -> 4 -> 2 -> 3
+
+Input:  1 -> 2 -> 3 -> 4 -> 5
+Output: 1 -> 5 -> 2 -> 4 -> 3 
+
+Approach;
+First find middle of the linked list
+make 2 Linked Lists
+Reverse 2nd list and then add Nodes to linked list alternatievly of linekdlist1 and linkedlist2
+
+o(n)
+
+
+void RearrangeLinkedList(node *head)
+{
+
+node* slow=head,*fast=slow->next
+while(fast!=null)
+{
+	slow=slow->next
+	fast=fast->next->next
+}
+
+Node *head1=head
+Node *head2=slow->next
+slow->next=null
+
+Reverse(Node *head2)
+Node *cur=newNode(0);
+
+while(head1!=null || head2!null)
+{
+	if(head1!=null)
+	{
+		curr->next=head1
+		head1=head1->next
+		curr=curr->next
+	}
+	ifreverseList!=null)
+	{
+		curr->next=head2
+		head2=head2->next
+		curr=curr->next
+	}
+}
+head=head->next
+
+}
+void reverseList(Node *head)
+{
+Node* prev=null,current=head,next
+
+while(current!=null)
+{
+	next=current->next
+	current->next=prev
+	prev=current
+	current=next
+}
+head=prev
+return head
+}
+
+}

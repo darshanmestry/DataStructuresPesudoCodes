@@ -1,0 +1,20 @@
+This is a simple level order taveral just we pass the k to the fucntion and when k=0 we print 
+other wise we recursibly call the function by for the left and right sutree and pass value of k as k-1
+
+o(n) where n is the no of nodes in a binray tree
+
+void printKDistanceNodes(Node* root,int k)
+{
+	if(root==null)
+		return
+	if(k==0)
+	{
+		print root->data
+		return
+	}
+	else
+	{
+		printKDistanceNodes(root->left,k-1)
+		printKDistanceNodes(root->right,k-1)
+	}
+}

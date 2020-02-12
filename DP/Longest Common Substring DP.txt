@@ -1,0 +1,22 @@
+void LCS(string str1,string str2)
+{
+	int[,] mat=new int[str2.length,str1.length];
+	int result=0;
+
+	for(int i=0;i<str1.length;i++)
+	{
+		for(int j=0;j<str2.length)
+		{
+			if(i==0||j==0)
+				mat[i,j]=0
+			if(str[i]==str2[j]
+			{
+			 	mat[i,j]=str[i-1,j-1]+1
+				result=Math.Max(result,mat[i,j]);
+			}
+			else
+				mat[i,j]=0;
+				
+		}
+	}
+}

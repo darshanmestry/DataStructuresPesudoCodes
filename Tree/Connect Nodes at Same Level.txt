@@ -1,0 +1,104 @@
+nput Tree
+       A
+      / \
+     B   C
+    / \   \
+   D   E   F
+
+
+Output Tree
+       A--->NULL
+      / \
+     B-->C-->NULL
+    / \   \
+   D-->E-->F-->NULL
+
+void connect(struct Node* root) 
+{ 
+    queue<Node*> q; 
+    q.push(root); 
+  
+    // null marker to represent end of current level 
+    q.push(NULL);  
+  
+    // Do Level order of tree using NULL markers 
+    while (!q.empty()) { 
+        Node *p = q.front(); 
+        q.pop(); 
+        if (p != NULL) { 
+  
+            // next element in queue represents next  
+            // node at current Level  
+            p->nextRight = q.front(); 
+  
+            // push left and right children of current 
+            // node 
+            if (p->left) 
+                q.push(p->left);  
+            if (p->right) 
+                q.push(p->right); 
+        }  
+         
+        // if queue is not empty, push NULL to mark  
+        // nodes at this level are visited 
+        else if (!q.empty())  
+            q.push(NULL);  
+    } 
+} 
+
+
+Void ConnectNodesAtSameLevel(Node* root)
+{
+	node* temp
+		
+	root->nextRight=null
+
+	while(root!=null)
+	{
+		node* q=root;
+		
+		while(q->next!=null)
+		{
+			if(q->left!=null)
+			{
+				if(q->right!=null)
+					q->left->nextRight=q->right
+				else
+					q->left->nextRight=getRightNode(q)
+
+				
+			}
+			if(q->right)
+				q->right->NextRight=getRightNode(q)
+
+			q=q->nextRight
+			
+		}
+
+		if(root->left!=null)
+			root=root->left
+		else if(root-> right!=null)
+			root=root->right
+
+		else
+			root=root->nextRight;
+
+	}	
+
+}
+
+Node* getRightNode(Node* p)
+{
+	Node* temp=p
+	if(Temp!=NULL)
+	{
+		if(temp->left!=null)
+			temp=temp->left
+		else if(temp->right!=null)
+			temp=temp->right
+		
+		temp=temp->nextRight
+	}
+
+	return NULL	
+}

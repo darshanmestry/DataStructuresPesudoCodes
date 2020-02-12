@@ -1,0 +1,89 @@
+Class MinMaxHeap  
+{	
+	//Main Method is in the end
+	int size;
+	int [] arr;
+
+	MaxHeap(int size, int[] arr)
+	{
+		this.size=size
+		this.arr=arr
+
+		buildheap();
+	}
+
+	private void buildheap()
+	{
+		for(int i=size/2-1;i>=0;i--)
+			Minheapify(i)
+	}
+
+	private void Minheapify(int i)
+	{
+		int smallest=i;
+
+		int leftChildIndex=2*i+1;
+		int rightChildIndex=2*i+2;
+
+		if( leftChildIndex <size && arr[smallest]>arr[leftchildIndex])
+			smallest=leftchildIndex
+		
+		if( rightChildIndex <size && arr[smallest]>arr[rightChildIndex])
+			smallest=rightchildIndex
+
+		if(smallest!=i)
+		{
+			swap(arr[i],arr[smallest])
+			MinHeapify(smallest)
+		
+		}
+	}
+
+	private void Maxheapify(int i)
+	{
+		int largest=i;
+		
+		int letchildIndex=2*i+1
+		int rithtchildIndex=2*i+2
+
+		if(leftchildIndex <size && arr[largest]<arr[leftchildIndex]
+			larest=leftchildIndex
+
+		if(rightchildIndex<size && arr[largest]<arr[rightchildIndex])
+			largest=rightchildIndex
+
+
+		if(largest!=i)
+		{
+			swap(arr[i],arr[largest])
+			MaxHeapify(largest)	
+		}
+	}
+
+	private void FirstKelenents(int[] arr,int k) // Min elements
+	{
+		for(int i=k;i<size;i++)
+		{
+			if(arr[0]<arr[k])
+				continue
+
+			else
+			{
+				arr[0]=arr[i]
+				MinHeapify(i);
+			}
+		}
+
+		print arr[0]  //Kth smallest element
+	}
+
+	void main()
+	{
+		int arr[]={11, 3, 2, 1, 15, 5, 4, 45, 88, 96, 50, 45}
+		int k=3;
+		MinMaxHeap obj=new MinMaxHeap(arr.length,arr)
+		
+		obj.FirstKelemenets(arr,k)
+		
+	}
+}

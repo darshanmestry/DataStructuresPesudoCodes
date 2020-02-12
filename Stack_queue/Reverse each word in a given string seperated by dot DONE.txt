@@ -1,0 +1,4 @@
+to solve this issue use satck.
+
+Traverse the string char by char and till dot is encountered push elements to stack
+once dot occours pop all the elements of stack

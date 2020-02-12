@@ -1,0 +1,51 @@
+Print left boundry
+print right boundry
+print leaf nodes
+
+void printBoundry(node* root)
+{
+	if(root==null)
+	return
+
+	print root->data
+
+	printleftBoundry(root)
+
+	printAllLeafs(root->left)
+	printAllLeafs(root->left)
+
+	printrightoundry(root)
+
+	
+}
+
+void prirtLeftBoundry(node* root)
+{
+	if(root==null)
+		return
+
+	if(root->left)
+	{
+		print root->data
+		prirtLeftBoundry(root->left)
+	}
+	else if(root->right)
+	{
+		root->data
+		prirtLeftBoundry(root->left)
+	}
+		
+}
+
+printLeafNodes(Node* root)
+{
+	if(root==null)
+		return
+
+	printLeafNodes(root->left)
+
+	if(root->left==null and root->right==null)
+		print root->data
+		
+	printLeafNodes(root->right)
+}

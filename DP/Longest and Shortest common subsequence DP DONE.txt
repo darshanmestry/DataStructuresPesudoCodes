@@ -1,0 +1,77 @@
+o(mn) solution
+
+void lcs(char[] s1,char[] s2,int m,int n)
+{
+	int[,]=new int[m+1,n+1]
+
+	for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			if(i==0||j==0)
+			t[i,j]=0
+			if(s1[i-1]==s2[j-1]
+				t[i,j]=s[i-1,j-1]+1
+			else
+				t[i,j]=MAX(t[i-1,j],t[i,j-1])
+		}
+	}
+
+	return t[m,n]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LCS Problem Statement: Given two sequences, find the length of longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
+
+ 
+			lcs("AXYT", "AYZX")
+                       /                 
+         lcs("AXY", "AYZX")            lcs("AXYT", "AYZ")
+         /                              /               
+lcs("AX", "AYZX") lcs("AXY", "AYZ")   lcs("AXY", "AYZ") lcs("AXYT", "AY")
+
+
+int LCS(char[] str1,char[] str2, int m,int n)
+{
+	if(m==0 || n==0)
+		return 0
+
+	if(str1[m-1]==str2[n-1)
+		return 1+ lcs(str1,str2,m-1,n-1)
+	else 
+	
+		return max(lcs(str1,str2,m,n-1),lcs(,str1str2,m-1,n))
+}
+
+
+Given two strings str1 and str2, find the shortest string that has both str1 and str2 as subsequences.
+Examples :
+
+Input:   str1 = "geek",  str2 = "eke"
+Output: "geeke"
+
+Input:   str1 = "AGGTAB",  str2 = "GXTXAYB"
+Output:  "AGXGTXAYB"
+
+scs is LEngth of str1+ Length of str2 -LCS
+
+int scs(strnig str1,string str2)
+{
+	int m=str1.length;
+	int n=str2.length;
+	
+	int l=lcs(str1,str2,m,n)
+	return (m+n-l)
+}

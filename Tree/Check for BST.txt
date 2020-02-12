@@ -1,0 +1,18 @@
+O(n)
+
+int isBST(node* root)
+{
+	return isBSTUtil(root,INT_MIN,INT_MAX)
+}
+
+int isBSTUtil(node* root,int INT_MIN,int INT_MAX)
+{	
+	if(root==null)
+		return 1
+
+	if(root-<INT_MIN || root->data>INT_MAX)
+		return 0
+
+	return ((isBSTUtil(root->left,INT_MIN,root->data-1) && (isBSTUTil(root->right,root->data+1,INT_MAX))
+	
+}

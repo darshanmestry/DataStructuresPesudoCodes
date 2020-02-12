@@ -1,0 +1,13 @@
+O(n)
+
+Void pairWiseSwap(node* head)
+{
+	node* temp=head
+
+	while(Temp!=null && temp->next!=null)
+	{
+		swap(temp->data,temp->next->data)
+
+		temp=temp->next->next
+	}
+}

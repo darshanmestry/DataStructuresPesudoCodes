@@ -1,0 +1,60 @@
+bool isPalindrome(node *head)
+{
+	node* slow=fast=head
+	node* midnode,prev_to_slow,second_half
+	
+	while(fast!=null ||fast->next!=null)
+	{
+		prev_to_slow=slow
+		slow=slow->next
+		fast=falast->next->next
+	}
+
+	if(fast!=null)
+	{
+		midnode=slow	
+		slow=slow->next
+	}
+	
+	second_half=slow
+
+	reverse(Second_half)
+
+	prev_to_slow.next=null
+
+	res=compare(head,second_half)
+
+	if(midnode==null)
+	{
+	  prev_To_slow->next=second_half)
+	}
+	else
+	{
+		prev_to_node.next=midnode
+		midnode.next=second_half	
+	}	
+	
+}
+
+bool compare(node* head1,node* head2)
+{
+	n1=head1
+	n2=head2
+
+	while(n1!=null && n2!=null)
+	{
+		if(n1->data==n2->data)
+		{
+			n1=n1->next
+			n2=n2->next
+		}
+		else
+			return flase
+	}
+
+	if(n1==null && n2==null)
+		return true
+
+	return false
+
+}

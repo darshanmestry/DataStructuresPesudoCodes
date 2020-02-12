@@ -1,0 +1,82 @@
+To make union of linked list it is a simple problem the issue is not to add dupliate
+elements this can be achived by using hashing
+
+store elements of linkedlist 1 and linekdlist 2 in hash table
+as hashtable wont have duplicate value then just 
+
+itreate throguh hashtable and make the result list 
+======== Class Structure =====
+Class LinkedList
+{
+	Node head
+
+}
+Class Node
+{
+	int data
+	Node next
+	Node(data)
+	{
+		data=data;
+		next=null
+	}
+}
+====
+void getUnion(node listA,listB)
+{
+	LinkedList result=new LinkedList();
+	Dictionary<int,int> isVisited=new Dictionart<int,int>();
+	
+	while(listA->!=null)
+	{
+		if(isVisited.ContainsKey(listA.data))
+		{
+			isVisited[ListA.Data]++;	
+		}	
+		else
+		{
+			isVisited.add(listA.data,1)
+		}
+		
+	}
+
+	while(listB->!=null)
+	{
+		if(isVisited.ContainsKey(listB.data))
+		{
+			isVisited[ListB.Data]++;	
+		}	
+		else
+		{
+			isVisited.add(listB.data,1)
+		}
+		
+	}
+
+	foreach(KeyValuePaitr<int,int> dict in isVisited)
+	{
+		result.appned(dict.data)
+	}
+}
+
+void Append(int data)
+{
+	if(this.head==null)
+	{
+		Node newnode=new Node(data)
+		this.head=newnode
+		return
+	}
+	Node n1=new node(data)
+ 	Node n2=this.head
+	while(n2.next!=null)
+	{
+		n2=n2.next
+	}
+	n2.next=n1
+	n2.next=null
+}
+	
+	
+	
+}

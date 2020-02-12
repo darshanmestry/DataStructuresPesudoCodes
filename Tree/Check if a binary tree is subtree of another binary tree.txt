@@ -1,0 +1,72 @@
+1) Find inorder and preorder traversals of T, store them in two auxiliary arrays inT[] and preT[].
+
+2) Find inorder and preorder traversals of S, store them in two auxiliary arrays inS[] and preS[].
+
+3) If inS[] is a subarray of inT[] and preS[] is a subarray preT[], then S is a subtree of T. Else not.
+
+
+void inOrder(node* root,char[] ch,int len)
+{
+	
+	if(root==null)
+	{
+		ch[len++]='$'
+	return
+	}
+
+	inOder(root->left,ch,len)
+
+	ch[len++]=root->data
+
+	inOrder(root->left,ch,len)
+
+}
+
+Void PreOrder(node* root,char[ch],int len)
+{
+	if(root==null)
+	{
+		ch[len++]='$'
+		return
+	}
+
+	ch[len+]=root->data
+
+	preOrder(root->left,ch,len)
+	preOrder(root->right,ch,len)
+	
+}
+
+void isSubtree(node*rootL,node* rootS)
+{
+	if(rootS==null)
+		retutn true
+	if(rootl==null)
+		return false
+
+	char[] s=new char[MAX]
+	char[] l=new char[MAX]
+
+	int m=0,n=0;
+
+	inorder(rootL,L,m)
+	inorder(rootS,s,n)
+
+	s=l='\0;
+
+	if(strstr(s,l)==NULL)
+		return null
+
+	char[] s=new char[MAX]
+	char[] l=new char[MAX]
+ 	int m=0,n=0;
+
+	preorder(rootL,L,m)
+	preorder(rootS,s,n)
+
+
+	return(strstr(s,L)!=null)
+	
+
+	
+}

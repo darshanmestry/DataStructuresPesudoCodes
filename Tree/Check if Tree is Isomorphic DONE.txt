@@ -1,0 +1,25 @@
+Two trees are called isomorphic if one of them can be obtained from other by a series of flips, i.e. by swapping left and right children of a number of nodes. Any number of nodes at any level can have their children swapped. Two empty trees are isomorphic.
+
+We simultaneously traverse both trees. Let the current internal nodes of two trees being traversed be n1 and n2 respectively. There are following two conditions for subtrees rooted with n1 and n2 to be isomorphic.
+1) Data of n1 and n2 is same.
+2) One of the following two is true for children of n1 and n2
+……a) Left child of n1 is isomorphic to left child of n2 and right child of n1 is isomorphic to right child of n2.
+……b) Left child of n1 is isomorphic to right child of n2 and right child of n1 is isomorphic to left child of n2.
+
+bool isIso(node* root1,node* root2)
+{
+	if(root1==null && root2==null)
+		return true
+
+	if(root1==null || root2==null
+		return false
+
+	if(root1->data!=root2->data)
+		return false
+
+	if((isIso(root1->left,root2->left) && isIso(root1->right,root2->right)) ||
+	  (isIso(root-1>left,root2->right) && isIso(root1->right,root2->left)
+		return true
+	else
+	return flase
+ }

@@ -1,0 +1,37 @@
+void correctBst(Node* root)
+{
+	Node* first,middle,last,prev;
+	first=last=middle=prev=null;
+
+	correctBSTUtil(root,first,middle,last,prev);
+
+	if(First!=null && last!=null)
+		swap(first,last)
+	else	
+}		swap(first,middle)
+
+void correctBSTUtil(Node* root,Node** first,Node** middle,Node** last,Node** prev)
+{
+	correctBSTUtil(root->left,first,middle,last,prev)
+	
+	if(prev!=null && root-data< (*prev)->data)
+	{
+		if(!first)
+		{
+			first=prev
+			middle=root
+		}
+		else
+			last=root
+	}
+
+	perv=root;
+	correctBSTUtil(root->right,first,middle,last,prev)	
+}
+
+void swap(node* node1,node* node2)
+{
+	node* temp=node1
+	node1=node2
+	node2=temp	
+}

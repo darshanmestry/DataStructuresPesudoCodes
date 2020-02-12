@@ -1,0 +1,13 @@
+O(n)
+
+void TransFormToSumTree(Node * root)
+{
+	if(root==null)
+		return 0
+	
+	int old_data=root->data
+	
+	node->data=transFormToSumTree(root->left)+TransFormToSumTree(root->right)
+
+	return node->Data+old_Data
+}

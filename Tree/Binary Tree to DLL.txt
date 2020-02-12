@@ -1,0 +1,20 @@
+
+O(n)
+void BinaryToDLL(node*root,node* head)
+{
+	if(root==null)
+		return
+	static node* prev=null
+
+	BinaryToDLL(root->left)
+	if(prev==null)
+		head=root;
+	else
+	{
+	root->left=prev;
+	prev->right=root
+	}
+	prev=root
+	BinaryToDLL(root->right)
+
+}

@@ -1,0 +1,24 @@
+void delete_n_nodes_after_m_nodes(node* head,int m,int n)
+{
+	node* cur=head
+	while(cur)
+	{
+		for(int i=1;i<m && cur!=null;i++)
+		{
+			cur=cur->nect
+		}
+
+		if(Cur==null)
+		return
+
+		node * t=cur->nect
+		for(int i=1;i<n;i++)
+		{
+			node*temp=t
+			t=t->next
+			delete(t)
+		}
+		
+		cur->next=t
+	}	
+}

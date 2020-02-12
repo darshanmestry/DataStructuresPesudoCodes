@@ -1,0 +1,34 @@
+O(n)
+void NonRepeatingChar(string str,int k)
+{
+	int count=new int[256]
+	int index=new int[256]
+
+	int n=str.Length;
+
+	for(int i=0;i<n;i++)
+	{
+		count[i]=0;
+		index[i]=n;
+	}
+
+	for(int i=0;i<n;i++)
+	{
+		char ch=str.CharAt(i);
+
+		count[ch]++;
+
+		if(count[ch]==1)
+		{
+			index=i
+		}
+		if(count[ch]==2)
+		{
+			index=n;
+		}
+
+		Array.Sort(Count)
+
+		return (count[k-1]=!n?count[k-1]:-1
+	}
+}

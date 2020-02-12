@@ -1,0 +1,54 @@
+
+nput Tree  k=3    
+       5
+      / \
+     2   6
+    / \   \
+   0   1   7
+
+FUNCTION buildTree (root,X)
+    IF (root==NULL)
+        Return NULL;
+    END IF
+    IF (root->data is equal to X)
+        return root->left; //returning the left subtree basically
+    ELSE IF(root->data>key)
+        //recur for the left subtree since left subtree may also have nodes 
+        //that need to be deleted due to greater or equal values
+        return buildTree(root->left, X); 
+    ELSE
+        //root is not at all to be deleted, same for left subtree, 
+        //recursively process right subtree
+        root->right=buildTree(root->right, X);
+        return root;
+END FUNCTION
+
+void deleteNodesGreaterThanK(Node * root,int k)
+{
+	if(root==nul)
+		return
+
+	if(k==root->Data)
+		return root->left 
+	if(k<root->data)
+	{
+		return deleteNodesGreaterThanK(root->left,k)
+	}
+	else
+	{
+		root->right=deleteNodesGreaterThanK(root->right,k)
+		return root
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

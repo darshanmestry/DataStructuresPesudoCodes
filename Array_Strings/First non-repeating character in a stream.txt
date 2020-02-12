@@ -1,0 +1,26 @@
+string firstNonRepeatingChar(string str)
+{
+	if(string.IsNullOrEMpty)
+	  return
+	
+	List<char> list=new List<Char>();
+
+	bool[] visited=new bool[256];
+
+	for(int i=0;i<str.Length;i++)
+	{
+		char ch=str.ElementAt(i);
+		if(!visited[ch])
+		{
+			if(!list.contains)
+				list.add(Ch)
+			else
+			{
+				list.remove(ch);
+				visited[ch]=true
+			}
+		}
+		if(list.Count>0)
+			print " "+list.elementAt(0)
+	}
+}

@@ -1,0 +1,66 @@
+Given a binary tree, find the maximum path sum. The path may start and end at any node in the tree.
+
+Example:
+
+Input: Root of below tree
+       1
+      / \
+     2   3
+Output: 6
+
+See below diagram for another example.
+1+2+3
+
+
+For each node there can be four ways that the max path goes through the node:
+1. Node only
+2. Max path through Left Child + Node
+3. Max path through Right Child + Node
+4. Max path through Left Child + Node + Max path through Right Child
+
+
+int findMaxSum(Node *root)
+{
+	int max=findMaxSumUtil(root,INT_MIN)
+
+	return max
+}
+
+int findMaxSumUtil(Node* root,int res)
+{
+	if(root==null)
+		return 0
+	
+	int l=findMaxSumUtil(root->left,res)
+	int r=findMaxSumUtil(root->,res)
+
+	int max_single=Max(max(l,r)+root->data,root->data)
+
+	int max_top=Max(l+r+root->data,max_single)
+	
+	res=Max(res,Max_top)
+
+	return max_single
+}
+
+int maxPathSum(node*root)
+{
+	if(root==null)
+		return 0
+
+	int l=maxPathSum(root->left)
+	int r=maxPathSum(root-->right)
+
+	int maxLr=MAX(l,r)
+
+	int maxsingle=MAX(maxlr+root->data,root->data)
+
+	maxAll=MaX(maxSingle,l+r+root->data)
+
+	res=MAX(res,MaxAll)
+	
+	reutrn maxsingle
+}
+
+
+

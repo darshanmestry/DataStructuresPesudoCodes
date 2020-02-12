@@ -1,0 +1,60 @@
+
+	Dictionary<Node,Node> map;
+void NodeAtDisTanceK(node root, node  startnode,int k)
+{
+	CreateParentCurrentNodeMapping(Dictionary<Node,Node> map,root,null)
+	Queue<Node> q=new LinkedList<Node>();
+
+	HashSet<Node> seen=new HashSet<Node>();
+
+	q.add(startnode);
+
+	while(!q.isEmpty())
+	{
+
+		if(currentlaye==k)
+		{
+			return print(q)
+		}
+		node currentnode=q.poll();
+		
+		if(currentnode.left!=null && !seen.contains(currentnode.left) )
+		{
+			q.add(Currentnode.left)
+			seen.add(currentnode.left)
+			
+		}
+		if(currentnode.right!=null && !seen.contains(currentnode.right))
+		{
+			q.add(Currentnode.right)
+			seen.add(currentnode.right)
+			
+		}
+
+		node parentnodeofcur=map.get(currentnode);
+		
+		if(parentnodefocur!=null && !seen.contains(parentnodefocur)
+		{
+			q.add(parentnodeofcur)
+			q.seen(parentnodeofcur)
+		}
+		currentlayer++;
+		
+	}
+
+
+	
+}
+
+
+void CreateParentCurrentNodeMapping(Dictionary<Node,Node> map,node root,node parent)
+{
+
+	if(root==null)
+		return
+
+	map.add(root,parent)
+
+	CreateParentCurrentNodeMapping(map,root->left,root)
+	CreateParentCurrentNodeMapping(map,root->right,root)
+}

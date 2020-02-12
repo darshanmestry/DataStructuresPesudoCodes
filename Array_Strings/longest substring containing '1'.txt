@@ -1,0 +1,35 @@
+If input is number
+void LongestSubstring(int x)
+{
+	int count=0;
+	while(x!=0)
+	{
+		x=x&(x<<1)
+
+		count++
+	}
+
+	return count
+}
+
+// IF input is string
+Void longestSubstring(string str)
+{
+	int i,n-str.Length,ans,temp=0;
+
+	while(i<n)
+	{
+		if(str.ElementAt(i)=='0')
+		{
+			temp=0;
+		}
+		else
+		{
+		temp++;
+		ans=Math.Max(ans,Temp)
+		}
+	 i++
+	}
+
+	return temp
+}
