@@ -1,0 +1,46 @@
+void printMatrixInSpiralForm(int[,] arr)
+{
+   int collen=arr[1].length
+   int rowlen=arr[0].length
+
+   int firstrow=0;
+   int firstcol=0;
+
+   int lastrow=rowlen-1;
+   int lastcol=collen-1
+
+   while(firstrow<=lastrow)
+   {
+       for(int i=firstcol;i<=lastcol;i++)
+       {
+           print arr[firstrow,i]
+       }
+
+        firstrow++
+
+       for(int i=firstrow;i<=lastrow;i++)
+       {
+           print arr[i,lastcol]
+       } 
+       lastcol--
+
+      if(firstcol<=lastcol)
+      {
+            for(int i=lastcol;i>=firstcol;i--)
+            {
+                print arr[lastrow,i]
+            }
+            lastrow--
+      }
+      
+        if(firstrow<=lastrow)
+        {
+            for(int i=lastrow;i>=firstrow;i--)
+            {
+                print [i,firstcol]
+            }
+            firstcol++
+        }
+   }
+
+}

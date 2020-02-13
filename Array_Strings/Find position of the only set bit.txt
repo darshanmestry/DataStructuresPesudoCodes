@@ -1,0 +1,33 @@
+
+This problem means when a no is passed how many no of 1s it will have in a binary representaion
+
+we have to find if there is only one ocurence of 1 
+
+so for that we check if no is of power 2 if it is then only it will have only 1 and rest o
+n&(n-1)==0
+
+take i as 0 and pos to store position
+run while loop till i>0
+
+and shift the bits x=x<<1
+
+and increase the poss
+
+int the end pos will have the index of 1
+
+int findPos(int n)
+{
+
+    int i=1,pos=1;
+
+    if(n>0 && (n&(n-1)==0))
+    {
+        while(i&n==0)
+        {
+            i=i<<1
+            pos++;  
+        }
+        return
+    }
+
+}
