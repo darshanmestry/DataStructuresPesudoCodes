@@ -1,0 +1,49 @@
+int findLargestReion(int[,] arr,int rowLen,int colLen)
+{
+    bool[,] visited =new bool[rowLen,colLen];
+
+    int maxRegion=0;
+    int count=0;
+
+    for(int i=0;i<rowLen;i++)
+    {
+        for(int j=0;j<colLen;j++)
+        {
+            if(arr[i,j]==1 && !visited[i,j])
+            {
+                count++;
+                DFS(i,j,visited,count)
+                 MaxRegion=Max(MaxRegion,count);
+            }
+        }
+    }
+
+    reutn maxRegion;
+}
+
+void DFS(int i,int j,bool[,] visited,int count)
+{
+    int rmove={-1,-1,1,0,1,1,1,0}
+    int cmove={-1,0,,1,1,0,-1,-1}
+
+    visited[i,j]=true;
+    for(int k=0;k<8;k++)
+    {
+        if(isSafe(i+rmove[k],j+cmove[k]),visited)
+        {
+            count++
+            DFS(i+rmove[k],j+cmove[k],visited,count)
+           
+        }
+    }
+
+}
+
+bool isSafe(int r,int c,int[,] visited)
+{
+    if((r>=0  && r<rowLen) && (c>=0  || c<colLen) && !visited[r,c]))
+        return true
+    else
+        return false;
+
+}

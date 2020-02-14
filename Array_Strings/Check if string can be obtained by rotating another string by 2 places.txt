@@ -1,0 +1,17 @@
+bool isStringPossible(string str,string str2)
+{
+    //Check clockwise
+    strin temp =str2.Substring(str2.length-2)+str2.Substring(0,str2.length-3)
+
+    if(str1==temp)
+        return true
+
+    //check anticlose wise
+    temp=str2.Substring(2)+str2.Substring(0,1);
+
+    if(str1==temp)
+        return true
+
+    return false;
+
+}

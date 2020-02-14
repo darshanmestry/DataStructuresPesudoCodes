@@ -1,0 +1,69 @@
+O(V+E)
+
+Class graph
+{
+	private int v
+	private LinkedList<int> adj[];
+	
+	graph(int v)
+	{
+		this.v=v
+		adj=new LinkedList[v]
+
+		for(int i=0;i<v;i++)
+		{
+			adj[i]=new LinkedList();
+		}	
+	}
+
+	private void addEdge(int v,int w)
+	{
+		adj[v].add(w);
+	}
+}
+
+
+
+void topologicalSort()
+{
+ 	Stack st=new stack();
+	bool[] isVisited=new bool[V]
+
+	for(int i=0;i<V;i++)
+	{
+		isVisited[i]=false;
+	}
+
+	for(int i=0;i<v;i++)
+	{
+		if(isVisited[i]==false)
+		{
+			topologicalSortUtil(v,st,isVisited)
+		}
+	}
+
+	while(!st.IsEmpty())
+	{
+		print st.pop()
+	}
+}
+
+
+void topologicalSortUtil(int v,Stack st,bool[] ivVisited)
+{
+	isVisited[v]=true
+
+	Iterator<int> iterator= new adj[v].Iterator;
+
+	for(int i=iterator.Begin;i<iterator.end;i++)
+	{
+		if(isVisited[i]==false)
+		{
+			topologicalSortUtil(i,st,isVisited)
+		}
+	}
+
+	st.push(v);
+
+
+}

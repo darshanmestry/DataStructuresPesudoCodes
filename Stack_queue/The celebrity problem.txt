@@ -1,0 +1,36 @@
+int find_celebrity(int [,] arr)
+{
+    stack<int> st=new stack<int>();
+
+    for(int i=0;i<arr[0].Length;i++)
+    {
+        st.push(i)
+    }
+
+    
+    while(st.size >1)
+    {
+        int a=st.top();
+        st.pop();
+
+        int b=st.top()
+        st.pop()
+
+
+        if(knows(a,b))
+            st.push(b)
+        else
+            st.push(a)
+    }
+    int c=st.top()
+    st.pop()
+
+    for(int i=0;i<arr[0].lenth;i++)
+    {
+        if(i!=c && (knows(c,i)|| knows(i,c)))
+            return -1
+    }
+
+    return c;
+
+}
