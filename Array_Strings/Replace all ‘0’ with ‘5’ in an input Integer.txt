@@ -1,0 +1,32 @@
+Given a integer as a input and replace all the ‘0’ with ‘5’ in the integer.
+Examples:
+
+    102 - 152
+    1020 - 1525 
+Use of array to store all digits is not allowed.
+
+
+int 0to5(int n)
+{
+    if(n==0)
+        return 5;
+    else
+        util(n);
+}
+
+int util(int n)
+{
+
+    if(n==0)
+        return 0;
+    int digit=n%10;
+    if(digit==0)
+        digit=5;
+
+    return util(n/10) *10 + digit
+    
+}
+
+1st itr= return (102/10) *10 + 2 this will (15(got from itr2 )*10+2) =152;
+2nd itr= return (10/10)*10 +5 this wil return (1/10)*10+5 =15 
+3rd itr= return (1/10)*10+ dight  this will return 0 as n==0

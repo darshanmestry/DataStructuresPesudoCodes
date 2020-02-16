@@ -1,0 +1,38 @@
+Build Lowest Number by Removing n digits from a given number
+Given a string ‘str’ of digits and an integer ‘n’, build the lowest possible number by removing ‘n’ digits from the string and not changing the order of input digits.
+Examples:
+
+Input: str = "4325043", n = 3
+Output: "2043"
+
+Input: str = "765028321", n = 5
+Output: "0221"
+
+static string res="";
+void buildNumber(string str,int n)
+{
+    int len=str.length;
+
+    if(len<=n)
+        return
+    
+    if(n==0)
+    {
+        res=str;
+    }
+
+    int minindex=0;
+
+    for(int i=1;i<len;i++)
+    {
+        if(str[i]<str[minindex])
+            minindex=i;
+    }
+
+    res+=str[minindex];
+
+    string newstring=str.substring(minindex+1);
+
+    buildNumber(newstring,n-minindex);
+    
+}

@@ -1,0 +1,53 @@
+A Boolean Matrix Question
+Given a boolean matrix mat[M][N] of size M X N, modify it such that if a matrix cell mat[i][j] is 1 (or true) then make all the cells of ith row and jth column as 1.
+Example 1
+The matrix
+1 0
+0 0
+should be changed to following
+1 1
+1 0
+
+Example 2
+The matrix
+0 0 0
+0 0 1
+should be changed to following
+0 0 1
+1 1 1
+
+
+void changeMatrix(int[,] mat,int r,int c)
+{
+    int[] row=new int[r];
+    int[] col=new int[c];
+
+    for(int i=0;i<r;i++)
+        row[i]=0                  //initialize row with 0s
+
+    for(int i=0;i<c;i++)
+        col[i]=0;               //initialize col with 0s
+
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            if(mat[i,j]==1)
+            {
+                row[i]=1            //in row store which rows has 1s
+                col[j]=1            // in col store which cols has 1s
+            }
+        }
+    }
+
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            if(row[i]==1 || col[j]==1)        
+                arr[i,j]=1
+        }
+    }
+
+    print matrix;
+}

@@ -1,0 +1,21 @@
+Given a number n. The problem is to check whether every bit in the binary representation of the given number is set or not. Here 0 <= n.
+
+Examples :
+
+Input : 7
+Output : Yes
+(7)10 = (111)2
+
+Logic:f all bits in the binary representation of n are set, then adding ‘1’ to it will produce a number which will be a perfect power of 2. 
+Now, check whether the new number is a perfect power of 2 or not.
+
+bool isAllBitSet(int n)
+{
+    if(n==0)
+        return false
+
+    if(n&(n+1)==0)
+        return true
+
+    return false;
+}

@@ -1,0 +1,20 @@
+e a one line function to return position of first 1 from right to left, in binary representation of an Integer.
+
+I/P    18,   Binary Representation 010010
+O/P   2
+I/P    19,   Binary Representation 010011
+O/P   1
+
+int findpos(int n)
+{
+    int m=1;
+    int pos=1;
+
+    while((n&m)==0)
+    {
+        m=m<<1;
+        pos++
+    }
+
+    print pos;
+}

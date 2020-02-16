@@ -1,0 +1,40 @@
+Given a string you need to print all possible strings that can be made by placing spaces (zero or one) in between them.
+Input:  str[] = "ABC"
+Output: ABC
+        AB C
+        A BC
+        A B C
+
+O(n*(2^n)).
+
+void print(string str) //Start of function
+{
+    int len=str.Length;
+    char[] buff=new char[2*len]
+
+    buff[0]=str[0];
+
+    util(str,buff,1,1,len);
+
+}
+
+void util(string str,char[] buff,int i,int j,int len)
+{
+    if(i==len)
+    {
+        buff[j]='\0';
+        print buff
+        return;
+    }
+
+    // add char 
+    buff[j]=str[j];
+    util(str,buff,1,1,len)
+
+    //add space then char
+    buff[j]=' ';
+    buff[j+1]=str[i];
+
+    util(str,buff,i+1,j+2,len);
+    
+}

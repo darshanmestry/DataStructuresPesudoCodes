@@ -1,0 +1,36 @@
+Given an array of distinct elements and a number x, find if there is a pair with a product equal to x.
+Input : arr[] = {10, 20, 9, 40};
+        int x = 400;
+Output : Yes
+
+Input : arr[] = {10, 20, 9, 40};
+        int x = 190;
+Output : No
+
+Input : arr[] = {-10, 20, 9, -40};
+        int x = 400;
+Output : Yes
+
+bool is_Pair_Present(int[] arr, int x)
+{
+    Hashset<int> ht=new Hashset<int>();
+
+    for(int i=0;i<arr.length;i++)
+    {
+        if(x==0)
+        {
+            if(arr[i]==0)
+                return true;
+            else
+                continue;
+        }
+
+        if(x%arr[i]==0)
+        {
+            if(ht.Contains(x/arr[i]))
+                return true;
+            else    
+                ht.add(arr[i])
+        }
+    }
+}

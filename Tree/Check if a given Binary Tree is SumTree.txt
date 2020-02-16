@@ -1,0 +1,32 @@
+//Apporch is to move top to bottom 
+//First check root is sumtree by checking sum of its left and right subtree
+
+bool isSumTree(node* root)
+{
+    if(root==null)
+        return true;
+
+    if(root->left==null && root->right==null)
+        return true;
+
+    int leftsum=add(root->left)
+    int rightsum=add(root->right)
+
+    int total=leftsum+rightsum;
+
+    if(root->data==total)
+    {
+        if(isSumTree(root->left) && isSumTree(root->rightsum))
+            return true
+    }
+    return false;
+}
+
+int add(node* root)
+{
+    if(root==null)
+        return 0;
+
+    return root->data+ add(root->left)+add(root->right)
+
+}
