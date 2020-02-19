@@ -1,34 +1,32 @@
 O(n)
 void NonRepeatingChar(string str,int k)
 {
-	int count=new int[256]
-	int index=new int[256]
+			int max_char = 256;
+            int n = str.Length;
+            int[] count = new int[max_char];
+            int[] index = new int[max_char];
 
-	int n=str.Length;
+            for(int i=0;i<max_char;i++)
+            {
+                count[i] = 0;
+                index[i] = n;
+            }
 
-	for(int i=0;i<n;i++)
-	{
-		count[i]=0;
-		index[i]=n;
-	}
+            for (int i = 0; i < str.Length; i++)
+            {
+                char ch = str[i];
 
-	for(int i=0;i<n;i++)
-	{
-		char ch=str.CharAt(i);
+                count[ch]++;
 
-		count[ch]++;
+                if (count[ch] == 1)
+                    index[ch] = i;
+                if (count[ch] == 2)
+                    index[ch] = n;
+            }
 
-		if(count[ch]==1)
-		{
-			index=i
-		}
-		if(count[ch]==2)
-		{
-			index=n;
-		}
-
-		Array.Sort(Count)
-
-		return (count[k-1]=!n?count[k-1]:-1
-	}
+            Array.Sort(index);
+                if (index[k - 1] != n)
+                Console.WriteLine(str[index[k - 1]]);
+            else
+                Console.WriteLine (- 1);
 }

@@ -1,0 +1,15 @@
+bool isMirror(node* root1,node* root2)
+{
+    if(root1==null && root2==null)
+        return true;
+
+    if(root1==null || root2==null)
+        return true
+    
+    if(root1->data==root2->data)
+    {
+        if(isMirror(root1->left,root2->right) && isMirror(root1->right,root2->left))
+            return true
+    }
+    return false;
+}

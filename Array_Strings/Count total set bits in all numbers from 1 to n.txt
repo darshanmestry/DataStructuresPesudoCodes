@@ -1,0 +1,23 @@
+Given a positive integer n, count the total number of set bits in binary representation of all numbers from 1 to n.
+Examples:
+
+Input: n = 3
+Output:  4
+
+void TotalSetBits(int n)
+{
+    int count=0;
+
+    for(int i=1;i<=n;i++)
+    {
+        int temp=i;
+
+        while(temp!=0)
+        {
+            count=count+(temp&1);
+            temp=temp>>1;
+        }
+    }
+
+    print count;
+}

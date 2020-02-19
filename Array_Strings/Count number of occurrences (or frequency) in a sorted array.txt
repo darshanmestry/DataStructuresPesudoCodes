@@ -1,0 +1,55 @@
+Input: arr[] = {1, 1, 2, 2, 2, 2, 3,},   x = 2
+  Output: 4 // x (or 2) occurs 4 times in arr[]
+
+  Input: arr[] = {1, 1, 2, 2, 2, 2, 3,},   x = 3
+  Output: 1 
+
+
+Approach:
+
+get first index of the no to be searched using binary search
+get the last index of no to be searched using binary search
+and 
+return (lastindex-firstindex )+1
+
+
+// Globar variable
+int findex;
+int lindex;
+void NoOfOccur(int[] a,int n) //Start of func
+{
+    firstindex(a,0,a.Length-1,no)
+    lastindex(a,0,a.Length-1,no)
+
+    int count = (lastindex-firstindex)+1
+}
+
+void firstindex(int[] a,int low,int high,int no)
+{
+    if(high>=low)
+    {
+        int mid=(low+high)/2
+
+        if(no==a[mid]&& no!=a[mid-1])
+            findex=mid
+        else if(no>a[mid])
+            firstindex(a,mid+1,high,no)
+        else
+            firstindex(a,low,mid-1,no)
+    }
+}
+
+void lastindex(int[] a,int low,int high, int no)
+{
+    if(high>=low)
+    {
+        int mid=(low+high)/2
+        if(no==a[mid] && no!=a[mid+1])
+            lindex=mid
+        else if(no<a[mid])
+            lastindex(a,low,mid-1,no)
+        else
+            lastindex(a,mid+1,high,no)
+    }
+
+}

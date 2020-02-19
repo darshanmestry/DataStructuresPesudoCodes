@@ -1,0 +1,29 @@
+Input : a = 10, b = 20
+Output : 4
+Binary representation of a is 00001010
+Binary representation of b is 00010100
+We need to flip highlighted four bits in a
+to make it b.
+
+
+1. Calculate XOR of A and B.      
+        a_xor_b = A ^ B
+  2. Count the set bits in the above 
+     calculated XOR result.
+      
+
+
+
+int CountSetBits(int a,int b)
+{
+    int res=a^b;
+    int count=0;
+
+    
+    while(res!=0)
+    {
+        count=count+(res & 1);
+        res=res>>1;  //right shift res by 1
+    }
+    return count;
+}

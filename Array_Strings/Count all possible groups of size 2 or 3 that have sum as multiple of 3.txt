@@ -1,0 +1,52 @@
+Input: arr[] = {3, 6, 7, 2, 9}
+Output: 8
+// Groups are {3,6}, {3,9}, {9,6}, {7,2}, {3,6,9},
+//            {3,7,2}, {7,2,6}, {7,2,9}
+
+
+Approach:
+1. Hash all elements in a count array based on remainder, i.e, 
+   for all elements a[i], do c[a[i]%3]++;
+2. Now c[0] contains the number of elements which when divided
+   by 3 leave remainder 0 and similarly c[1] for remainder 1 
+   and c[2] for 2.
+3. Now for group of 2, we have 2 possibilities
+   a. 2 elements of remainder 0 group. Such possibilities are 
+      c[0]*(c[0]-1)/2
+   b. 1 element of remainder 1 and 1 from remainder 2 group
+      Such groups are c[1]*c[2].
+4. Now for group of 3,we have 4 possibilities
+   a. 3 elements from remainder group 0.
+      No. of such groups are c[0]C3
+   b. 3 elements from remainder group 1.
+      No. of such groups are c[1]C3
+   c. 3 elements from remainder group 2.
+      No. of such groups are c[2]C3
+   d. 1 element from each of 3 groups. 
+      No. of such groups are c[0]*c[1]*c[2].
+5. Add all the groups in steps 3 and 4 to obtain the result.
+
+int grpPossible(int[] a)
+{
+    int[] c={0,0,0};
+    int res=0;
+    for(int i=0;i<a.Length;i++)
+        c[a[i]%3]++;
+
+
+    res+=(c[0] *(c[0]-1))/2     // Combitaion of 2 nos from 0th index
+
+    res+=c[1]*c[2];             // Combitaion of 2 nos from 1st index and 2nd index
+
+    res+=(c[0]*c[0-1]*c[0-2])/6 // Combitaion of 3 nos from 0th index
+
+    res+=(c[1]*c[1-1]*c[1-2])/6 // Combitaion of 3 nos from 1st index
+
+    res+=(c[2]*c[2-1]*c[2-2])/6  // Combitaion of 3 nos from 2nd index
+
+    res+=c[0]+c[1]+c[2];         // Combitaion of 3 nos with 1 from 1st index,
+                                 //  1 from 2nd index and 1 from 3rd index 
+
+    return res;
+    
+}

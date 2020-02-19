@@ -1,0 +1,24 @@
+bool isNoPowerOfY(int n)
+{
+   for(int i=2;i<=Math.sqrt(n);i++)
+   {
+       int p=i;
+       while(p<=n)
+       {
+           p=p*i;
+           if(p==n)
+            return true;
+       }
+   }
+   return false;
+}
+
+int sqrt(int n)
+{
+    for(int i=1;i<n/2;i++)
+    {
+        if(i*i==n)
+            return (i*i)
+    }
+    return -1;
+}
